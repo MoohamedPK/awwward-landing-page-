@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: CircularWeb;
+    src: url('./fonts/circularweb-book.woff2');
+}
+
+@font-face {
+    font-family: General;
+    src: url('./fonts/general.woff2');
+}
+@font-face {
+    font-family: RobertMedium;
+    src: url('./fonts/robert-medium.woff2');
+}
+@font-face {
+    font-family: RobertRegular;
+    src: url('./fonts/robert-regular.woff2');
+}
+@font-face {
+    font-family: ZentryRegular;
+    src: url('fonts/zentry-regular.woff2');
+}
+
+@theme {
+    --font-circular: CircularWeb;
+    --font-general: General;
+    --font-robert-medium: RobertMedium ;
+    --font-robert-regular: RobertRegular;
+    --font-zentry-regular:ZentryRegular ;
+    --color-first-white: #DFDFF0;
+    --color-second-white:#DFDFF2;
+    --color-second-white: #F0F2FA;
+    --color-second-white: #010101;
+    --color-second-white: #4FB7DD;
+    --color-violet-primary: #5724FF;
+    --color-yellow-primary: #8E983F;
+    --color-yellow-secondary: #EDFF66;
+}
+
+@layer utilities {
+    .mask-clip-path {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .absolute-center {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+    }
+
+    .animated-word {
+        @apply md:text-[50px]  font-zentry-regular opacity-0;
+        transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+        transform-origin: 50% 50% -150px !important;
+        will-change: opacity, transform;
+    }
+}
+body {
+    width: 100dvw;
+    background-color: #dfdff0;
+    overflow-x: hidden;
+}
