@@ -91,10 +91,10 @@ function Hero() {
       {isLoading && (
         <div className="flex justify-center items-center absolute z-[100] h-dvh w-screen overflow-hidden bg-first-white">
           <div className="three-body ">
-            <Loading message="loading..."/>
+            <Loading message="loading..." />
           </div>
         </div>
-      )}  
+      )}
 
       <div
         id="video-frame"
@@ -140,13 +140,13 @@ function Hero() {
           />
         </div>
 
-        <h1 className="font-zentry-regular text-[100px] text-first-white absolute bottom-0 right-5 z-40">
+        <h1 className="font-zentry-regular text-[150px] text-first-white absolute bottom-0 right-10 z-40">
           Gaming
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full text-first-white">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="text-[100px] font-zentry-regular ">Redefine</h1>
+            <h1 className="text-[150px] font-zentry-regular ">Redefine</h1>
 
             <p className="mb-5 max-w-64 font-robert-medium">
               Enter the Metagame Layer <br /> Unleash the Play Economy{" "}
@@ -162,7 +162,7 @@ function Hero() {
         </div>
       </div>
 
-      <h1 className="font-zentry-regular text-[100px] text-black absolute bottom-0 right-5 -z-40">
+      <h1 className="font-zentry-regular text-[150px] text-black absolute bottom-0 right-5 -z-40">
         Gaming
       </h1>
     </div>

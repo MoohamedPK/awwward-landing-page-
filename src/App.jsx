@@ -1,6 +1,4 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Navbar from "./components/Navbar";
+import {About, Navbar, Features, Hero} from "./components/index.js"
 
 function App() {
   return (
@@ -8,6 +6,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <About/>
+      <Features/>
     </main>
   )
 }
