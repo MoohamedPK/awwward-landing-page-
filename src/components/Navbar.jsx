@@ -2,13 +2,22 @@ import { useEffect, useRef, useState } from "react"
 import MeImg from "../../public/img/me.jpg"
 import Button from "../common/Button";
 import { TiLocationArrow } from "react-icons/ti";
+import { useWindowScroll } from "react-use";
+import gsap from "gsap"
+
 
 const navLinks = ['Nexus', 'Vault', 'Prologue', 'About', 'Contact'];
 
 function Navbar() {
 
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true)
+
+    const {y: currentScrollY} = useWindowScroll();
+
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const [isIndicatorActive, setIsAndicatorActive] = useState(false);
+
     const navContainerRef = useRef(null);
     const audioRef = useRef();
 
@@ -16,6 +25,34 @@ function Navbar() {
         setIsAudioPlaying((prev) => !prev );
         setIsAndicatorActive((prev) => !prev);
     }   
+
+    useEffect(() => {
+      if (currentScrollY === 0) {
+
+        setIsNavbarVisible(true);
+        navContainerRef.current.classList.remove('floating-nav');
+
+      } else if (currentScrollY > lastScrollY) {
+
+        setIsNavbarVisible(false);
+        navContainerRef.current.classList.add('floating-nav');
+
+      } else if (currentScrollY < lastScrollY ) {
+
+        setIsNavbarVisible(true);
+        navContainerRef.current.classList.add('floating-nav');
+      }
+
+      setLastScrollY(currentScrollY)
+      
+    }, [currentScrollY, lastScrollY])
+
+    useEffect(() => {
+      gsap.to(navContainerRef.current, {
+        y: isNavbarVisible ? 0 : -100 ,
+        opacity: isNavbarVisible ? 1 : 0
+      })
+    }, [isNavbarVisible])
 
     useEffect(() => {
         if (isAudioPlaying) {
@@ -28,7 +65,7 @@ function Navbar() {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 z-50 top-4 h-16 transition-all duration-500 sm:inset-x-6"
+      className=" fixed inset-x-0 z-50 top-4 h-16 transition-all duration-300 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex items-center justify-between size-full p-4">
