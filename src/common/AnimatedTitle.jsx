@@ -4,7 +4,7 @@ import {ScrollTrigger} from "gsap/all"
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AnimatedTitle({text, containerClass}) {
+function AnimatedTitle({text, containerClass, sectionId}) {
 
     const containerRef = useRef(null);
 
@@ -37,7 +37,7 @@ function AnimatedTitle({text, containerClass}) {
 
 
   return (
-    <div ref={containerRef} className={`mt-5 text-center text-black text-4xl uppercase leading-[0.8] md:text-[30px] ${containerClass}`}>
+    <div ref={containerRef} id={sectionId} className={`mt-5 text-center text-black text-4xl uppercase leading-[0.8] md:text-5xl ${containerClass}`}>
       {text.split("<br />").map((line, index) => (
         <div
           key={index}
@@ -49,7 +49,7 @@ function AnimatedTitle({text, containerClass}) {
               className="animated-word"
               dangerouslySetInnerHTML={{ __html: word }}
             />
-      ))}
+      ))} 
         </div>
       ))}
     </div>

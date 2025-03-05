@@ -1,4 +1,4 @@
-import {About, Navbar, Features, Hero} from "./components/index.js"
+import {About, Navbar, Features, Hero, Story} from "./components/index.js"
 
 function App() {
   return (
@@ -7,6 +7,8 @@ function App() {
       <Hero/>
       <About/>
       <Features/>
+      <Story/>
+      <div className="h-screen bg-white"></div>
     </main>
   )
 }

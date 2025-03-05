@@ -15,8 +15,8 @@ function CardsAnimation({children, className = ''}) {
         const relativeX = (e.clientX - left) / width;
         const relativeY = (e.clientY - top) / height;
 
-        const tiltX = (relativeX - 0.5) * 10;
-        const tiltY = (relativeY - 0.5) * 10;
+        const tiltX = (relativeX - 0.5) * 8;
+        const tiltY = (relativeY - 0.5) * 8;
 
         const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
 
