@@ -2,24 +2,24 @@
 
 @font-face{
     font-family: CircularWeb;
-    src: url('./fonts/circularweb-book.woff2');
+    src: url('/fonts/circularweb-book.woff2');
 }
 
 @font-face {
     font-family: General;
-    src: url('./fonts/general.woff2');
+    src: url('/fonts/general.woff2');
 }
 @font-face {
     font-family: RobertMedium;
-    src: url('./fonts/robert-medium.woff2');
+    src: url('/fonts/robert-medium.woff2');
 }
 @font-face {
     font-family: RobertRegular;
-    src: url('./fonts/robert-regular.woff2');
+    src: url('/fonts/robert-regular.woff2');
 }
 @font-face {
     font-family: ZentryRegular;
-    src: url('fonts/zentry-regular.woff2');
+    src: url('/fonts/zentry-regular.woff2');
 }
 
 @theme {

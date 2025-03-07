@@ -17,7 +17,7 @@ function Features() {
 
         <CardsAnimation className="border border-white/20 relative mb-7 h-96 w-full md:h-[65vh] overflow-x-hidden rounded-lg">
           <Card
-            src="../../public/videos/feature-1.mp4"
+            src="/videos/feature-1.mp4"
             title="radiant"
             description="The game of games transforming your in-game actions across Web2 & Web3 titles into a rewarding adventure."
           />
@@ -26,7 +26,7 @@ function Features() {
         <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
           <CardsAnimation className="relative border border-white/20 rounded-lg col-span-2 md:col-span-1 row-span-1 md:row-span-2 transition-transform duration-300">
             <Card
-              src="../../public/videos/feature-2.mp4"
+              src="/videos/feature-2.mp4"
               title="zigma"
               description="The NFT collection merging Zentry’s IP, AI, and gaming—pushing the boundaries of NFT innovation."
             />
@@ -34,7 +34,7 @@ function Features() {
 
           <CardsAnimation className="row-span-1 border border-white/20 rounded-lg ms-32 md:col-span-1 md:ms-0 relative col-span-2 md:row-span-1 transition-transform duration-300">
             <Card
-              src="../../public/videos/feature-3.mp4"
+              src="/videos/feature-3.mp4"
               title="nexus"
               description="The player portal uniting humans & AI to play, compete, earn and showcase—gamifying social & Web3 experiences."
             />
@@ -42,7 +42,7 @@ function Features() {
 
           <CardsAnimation className="row-span-1 border border-white/20 rounded-lg ms-32 md:col-span-1 md:ms-0 relative col-span-2 md:row-span-1 transition-transform duration-300">
             <Card
-              src="../../public/videos/feature-4.mp4"
+              src="/videos/feature-4.mp4"
               title="azul"
               description="The agent of agents elevating agentic AI experience to be more fun and productive. "
             />

@@ -99,7 +99,7 @@ function Navbar() {
               <audio
                 ref={audioRef}
                 className="hidden"
-                src="../../public/audio/STORMY - PIRATE (Music Video, pt. 56).mp3"
+                src="/audio/STORMY - PIRATE (Music Video, pt. 56).mp3"
                 loop
               />
 
