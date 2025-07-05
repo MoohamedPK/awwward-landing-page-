@@ -6,6 +6,7 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/all"
 import Loading from "../feedback/Loading";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
@@ -13,7 +14,7 @@ function Hero() {
     const [currentIndex, setCurrentIndex] = useState(1);  
     const [isClicked, setIsClicked] = useState(false);
 
-    const [isLoading, setIsLoading] = useState(true); // bs the video takes some time to laoded 
+    const [isLoading, setIsLoading] = useState(false); // bs the video takes some time to laoded 
     const [loadedVideo, setLoadedVideo] = useState(0); // the numbers of videos that has loaded 
     
     const totalVideos = 4;
